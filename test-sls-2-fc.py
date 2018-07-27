@@ -17,8 +17,8 @@ def handler(event, context):
 	print("LogService trigger and send data to FunctionCompute test output, The content of event is : %s" % (evt))
 
 	# AK/SK
-	accessKeyId = 'LTAIzozEawa7dTgq'    
-	accessKey = '21JIIj9oKJDrSRR61flpNl0rqN8KrJ'     
+	accessKeyId = '**********'    
+	accessKey = '**********'     
 
 	# 从event中获取数据
 	endpoint = evt['source']['endpoint']      
