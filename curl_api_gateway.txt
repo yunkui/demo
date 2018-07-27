@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function random()
+{
+    min=$1;
+    max=$2-$1;
+    num=$(date +%s%N);
+    ((retnum=num%max+min));
+    echo $retnum;
+}
+
+
+device_array=([0]="Windows_PC" "Linux" "iPhone" "iPad" "Android" "MacBook" "Unknown")
+
+count=$(random 100 300)
+#echo "the count in this loop is: $count"
+
+for((i=1;i<=$count;i++));
+do
+	uid=`cat /proc/sys/kernel/random/uuid`
+	ip_addr=$(($RANDOM/128)).$(($RANDOM/128)).$(($RANDOM/128)).$(($RANDOM/128))
+	device_value=${device_array[$(($RANDOM%7))]}
+	curl_cmd="curl -i -X POST http://daworld.davidzhangwei.com/postUserInfo/userinfo?uid=${uid}&ip=${ip_addr}&device=${device_value}"
+	#echo $curl_cmd
+	${curl_cmd}
+done
