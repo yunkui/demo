@@ -22,9 +22,9 @@ def handler(event, context):
   
   # print("test-api-gateway output: The uid is %s, the ip address is %s and the device type is %s. " % (uid, ip, device))
   
-  endpoint = 'cn-hangzhou.log.aliyuncs.com'       # 选择与上面步骤创建Project所属区域匹配的Endpoint
-  accessKeyId = 'LTAIzozEawa7dTgq'    # 使用您的阿里云访问密钥AccessKeyId
-  accessKey = '21JIIj9oKJDrSRR61flpNl0rqN8KrJ'      # 使用您的阿里云访问密钥AccessKeySecret
+  endpoint = 'cn-XXXX.log.aliyuncs.com'       # 选择与上面步骤创建Project所属区域匹配的Endpoint
+  accessKeyId = 'XXXX'    # 使用您的阿里云访问密钥AccessKeyId
+  accessKey = 'XXXX'      # 使用您的阿里云访问密钥AccessKeySecret
   project = 'eric-nginx-logstore'        # 上面步骤创建的项目名称
   logstore = 'eric-nginx-access-log-store'       # 上面步骤创建的日志库名称
   
