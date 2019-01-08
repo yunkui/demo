@@ -20,7 +20,7 @@ do
 	uid=`cat /proc/sys/kernel/random/uuid`
 	ip_addr=$(($RANDOM/128)).$(($RANDOM/128)).$(($RANDOM/128)).$(($RANDOM/128))
 	device_value=${device_array[$(($RANDOM%7))]}
-	curl_cmd="curl -i -X POST http://daworld.davidzhangwei.com/postUserInfo/userinfo?uid=${uid}&ip=${ip_addr}&device=${device_value}"
+	curl_cmd="curl -i -X POST http://daxxxxx.xxxxxxxx.com/postUserInfo/userinfo?uid=${uid}&ip=${ip_addr}&device=${device_value}"
 	#echo $curl_cmd
 	${curl_cmd}
 done
